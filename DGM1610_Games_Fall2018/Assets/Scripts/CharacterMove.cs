@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterMove : MonoBehaviour {
+public class CharacterMove: MonoBehaviour {
 
     //Player Movement Variables
 	public int MoveSpeed; 
@@ -21,7 +21,7 @@ public class CharacterMove : MonoBehaviour {
 		
 	}
 	void FixedUpdate () {
-		Grounded = Physics2D.OverLapCircle(GroundCheck.position, GroundCheckRadius, WhatIsGround);
+		Grounded = Physics2D.OverlapCircle(GroundCheck.position, GroundCheckRadius, WhatIsGround);
 	}
 	// Update is called once per frame
 	void Update () {
@@ -33,16 +33,16 @@ public class CharacterMove : MonoBehaviour {
 		
 		//This code makes the character move from side to side using the A&D keys
 		if(Input.GetKey (KeyCode.D)){
-			    GetComponent<RigidBody2D>().velocity = new Vector2(MoveSpeed, GetComponent<RigidBody2D>().velocity.y);
+			    GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
 
 		}
 		if(Input.GetKey (KeyCode.A)){
-			    GetComponent<RigidBody2D>().velocity = new Vector2(MoveSpeed, GetComponent<RigidBody2D>().velocity.y);
+			    GetComponent<Rigidbody2D>().velocity = new Vector2(-MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
 
 		}
 	}
 
 	public void Jump(){
-		GetComponent<RigidBody2D>().velocity = new Vector2(GetComponent<RigidBody2D>().velocity.x, JumpHeight);
+		GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, JumpHeight);
 	}
 }
