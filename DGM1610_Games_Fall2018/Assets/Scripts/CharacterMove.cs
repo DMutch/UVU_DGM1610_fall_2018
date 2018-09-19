@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CharacterMove : MonoBehaviour {
 
-//Player Movement Variables
+    //Player Movement Variables
 	public int MoveSpeed; 
 	public float JumpHeight = 15;
 
@@ -32,12 +32,12 @@ public class CharacterMove : MonoBehaviour {
 		}
 		
 		//This code makes the character move from side to side using the A&D keys
-		if(Input.GetKey (keyCode.D)){
-			GetComponent<RigidBody2D>().velocity = new Vector2(MoveSpeed, GetComponent<RigidBody2D().velocity.y);
+		if(Input.GetKey (KeyCode.D)){
+			    GetComponent<RigidBody2D>().velocity = new Vector2(MoveSpeed, GetComponent<RigidBody2D>().velocity.y);
 
 		}
 		if(Input.GetKey (KeyCode.A)){
-			GetComponent<RigidBody2D>().velocity = new Vector2(MoveSpeed, GetComponent<RigidBody2D>().velocity.y);
+			    GetComponent<RigidBody2D>().velocity = new Vector2(MoveSpeed, GetComponent<RigidBody2D>().velocity.y);
 
 		}
 	}
