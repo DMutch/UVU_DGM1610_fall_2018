@@ -1,6 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
 
 public class ScoreManager : MonoBehaviour {
 	public static int Score;
@@ -21,7 +21,7 @@ public class ScoreManager : MonoBehaviour {
 	void Update () {
 		if (Score < 0)
 			Score = 0;
-		ScoreText.text = "" + Score;		
+		ScoreText.text = " " + Score;		
 	}
 
 	public static void AddPoints (int PointsToAdd) {
@@ -31,4 +31,4 @@ public class ScoreManager : MonoBehaviour {
 	// public static void Reset () {}
 	// Score=0;
 	//
-}
+}                                                                                                                                                                                                                
