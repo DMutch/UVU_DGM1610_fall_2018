@@ -2,17 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterMove : MonoBehaviour {
+public class CharacterMove: MonoBehaviour {
 
-//Player Movement Variables
+    //Player Movement Variables
 	public int MoveSpeed; 
 	public float JumpHeight = 15;
+	private bool DoubleJump;
 
 	//Player Grounded Variables
 	public Transform GroundCheck;
 	public float GroundCheckRadius;
 	public LayerMask WhatIsGround;
 	private bool Grounded;
+
+	//Non-Stick Player
+	private float moveVelocity;
 
 
 	// Use this for initialization
@@ -21,7 +25,7 @@ public class CharacterMove : MonoBehaviour {
 		
 	}
 	void FixedUpdate () {
-		Grounded = Physics2D.OverLapCircle(GroundCheck.position, GroundCheckRadius, WhatIsGround);
+		Grounded = Physics2D.OverlapCircle(GroundCheck.position, GroundCheckRadius, WhatIsGround);
 	}
 	// Update is called once per frame
 	void Update () {
@@ -31,18 +35,32 @@ public class CharacterMove : MonoBehaviour {
 			Jump();
 		}
 		
+		//Double jump code
+		if(Grounded)
+			DoubleJump = false;
+
+		if(Input.GetKeyDown (KeyCode.Space)&& !DoubleJump && !Grounded){
+			Jump();
+			DoubleJump = true;
+		}
+		//Non-Stick Player
+		moveVelocity = 0f;
+
 		//This code makes the character move from side to side using the A&D keys
-		if(Input.GetKey (keyCode.D)){
-			GetComponent<RigidBody2D>().velocity = new Vector2(MoveSpeed, GetComponent<RigidBody2D().velocity.y);
-
+		if(Input.GetKey (KeyCode.D)){
+			    // GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+					moveVelocity = MoveSpeed;
 		}
+
 		if(Input.GetKey (KeyCode.A)){
-			GetComponent<RigidBody2D>().velocity = new Vector2(MoveSpeed, GetComponent<RigidBody2D>().velocity.y);
-
+			    // GetComponent<Rigidbody2D>().velocity = new Vector2(-MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+				moveVelocity = -MoveSpeed;
 		}
+		GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocity, GetComponent<Rigidbody2D>().velocity.y);
+
 	}
 
 	public void Jump(){
-		GetComponent<RigidBody2D>().velocity = new Vector2(GetComponent<RigidBody2D>().velocity.x, JumpHeight);
+		GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, JumpHeight);
 	}
 }
