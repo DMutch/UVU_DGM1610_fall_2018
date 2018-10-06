@@ -9,11 +9,10 @@ public class Level_Manager : MonoBehaviour {
 
 	//Particles
 	public GameObject DeathParticle;
-	publice GameObject RespawnParticle;
+	public GameObject RespawnParticle;
 
 	//Respawn Delay
 	public float RespawnDelay;
-
 
 	//Point Penalty on Death
 	public int PointPenaltyOnDeath;
@@ -23,28 +22,27 @@ public class Level_Manager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		player = FindObjectofType<Rigidbody2D> ();
+		Player = FindObjectOfType<Rigidbody2D> ();
 		
 	}
 	
-
-	}
 	public void RespawnPlayer(){
 		StartCoroutine ("RespawnPlayerCo");
 	}
 
 	public IEnumerator RespawnPlayerCo(){
 		//Generate Death Particle
-		Instantiate (DeathParticle, player.transform.position, player.transform.rotation);
+		Instantiate (DeathParticle, Player.transform.position, Player.transform.rotation);
 		//Hide Player
-		player.enabled = false; 
-		player.GetComponent<Renderer> ().enabled = false;
+		//Player.enabled = false; 
+		Player.GetComponent<Renderer>().enabled = false;
 		//Gravity Reset
-		GravityStore = player.GetComponent<Rigidbody2D>().gravityScale;
-		player.GetComponent<Rigidbody2D>().gravityScale = 0f;
-		player.GetComponent<Rigidbody2D>()velocity = Vector2.zero;
+		GravityStore = Player.GetComponent<Rigidbody2D>().gravityScale;
+		Player.GetComponent<Rigidbody2D>().gravityScale = 0f;
+		Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		//Point Penalty
-		ScoreManager.AddPoints(-pointPenaltyOnDeath);
-	}
+		ScoreManager.AddPoints(-PointPenaltyOnDeath);
+
+        return null;
 	}
 }

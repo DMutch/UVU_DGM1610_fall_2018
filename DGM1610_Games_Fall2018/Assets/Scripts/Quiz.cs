@@ -7,17 +7,5 @@ public class Quiz : MonoBehaviour {
 	public int Two;
 	int Total;
 
-	
-
-	Add = 
-
-//Update is called once per frame
- 
-   Add (One,Two);
-	
-	
- {print ("Score")
-	}
-
 	 
 }
