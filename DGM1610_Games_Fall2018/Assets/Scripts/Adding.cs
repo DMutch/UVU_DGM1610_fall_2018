@@ -14,8 +14,8 @@ public class Adding : MonoBehaviour
         Add(Num1, Num2);
     }
 
-    void Add(int One, int Two){
-        Total = One + Two;
+    void Add(int Num1, int Num2){
+        Total = Num1 + Num2;
         print(Total);
     }
 }
