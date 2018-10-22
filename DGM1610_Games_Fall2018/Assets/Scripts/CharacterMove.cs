@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,7 +6,7 @@ public class CharacterMove: MonoBehaviour {
 
     //Player Movement Variables
 	public int MoveSpeed; 
-	public float JumpHeight = 15;
+	public float JumpHeight = 10;
 	private bool DoubleJump;
 
 	//Player Grounded Variables
@@ -15,7 +15,7 @@ public class CharacterMove: MonoBehaviour {
 	public LayerMask WhatIsGround;
 	private bool Grounded;
 
-	//Non-Stick Player
+	//Non-Stick Player     
 	private float moveVelocity;
 
 
