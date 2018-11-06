@@ -438,6 +438,7 @@ GameObject:
   - component: {fileID: 711787969}
   - component: {fileID: 711787970}
   - component: {fileID: 711787971}
+  - component: {fileID: 711787972}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -535,6 +536,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   num: 0
   Name: 
+  Time: 0
+  Temp: 0
+  Quadrant: 
+  Beep: 0
+  Cats: 
+--- !u!114 &711787972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 711787965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb2d2684d7f4a8e43864c5acdabd4422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Eggs: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  Jedi: []
 --- !u!1 &835769997
 GameObject:
   m_ObjectHideFlags: 0
@@ -6620,6 +6639,7 @@ GameObject:
   - component: {fileID: 2115765978}
   - component: {fileID: 2115765977}
   - component: {fileID: 2115765976}
+  - component: {fileID: 2115765979}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -6683,6 +6703,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2115765979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2115765975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0ec0e7b1c863da4a91a78b37817a3cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NewPC: {fileID: 0}
+  isFollowing: 0
+  xOffset: 0
+  yOffset: 0
 --- !u!1 &2126403878
 GameObject:
   m_ObjectHideFlags: 0
@@ -6697,6 +6732,7 @@ GameObject:
   - component: {fileID: 2126403883}
   - component: {fileID: 2126403884}
   - component: {fileID: 2126403885}
+  - component: {fileID: 2126403886}
   m_Layer: 0
   m_Name: NewPC
   m_TagString: Untagged
@@ -6857,6 +6893,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FirePoint: {fileID: 1106097069}
   Projectile: {fileID: 1377778994}
+--- !u!114 &2126403886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2126403878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5f93bfe414eef741968058b1c3e6ef7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveSpeed: 3
+  JumpHeight: 10
+  GroundCheck: {fileID: 2147146678}
+  GroundCheckRadius: 0
+  WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &2147146677
 GameObject:
   m_ObjectHideFlags: 0
