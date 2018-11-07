@@ -9,7 +9,7 @@ public class Switches : MonoBehaviour {
     public int Time;
     public int Temp;
     public string Quadrant;
-    public bool Beep;
+    public bool Beep = false;
     public string Cats;
 
 	// Use this for initialization
@@ -112,15 +112,15 @@ public class Switches : MonoBehaviour {
                 break;
         }
 
-        //switch(Beep){
-        //case on:
-        // print("It is" + Beep);
-        // break;
+        switch(Beep){
+            case true:
+         print("It is" + Beep);
+             break;
 
-        //case off:
-        // print("It is" + Beep);
-        // break;
-        // }
+            case false:
+             print("It is" + Beep);
+             break;
+         }
 
         switch(Cats){
             case "black":
