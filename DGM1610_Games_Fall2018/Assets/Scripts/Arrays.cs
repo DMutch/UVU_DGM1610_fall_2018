@@ -8,7 +8,10 @@ public class Arrays : MonoBehaviour {
 
 	public string[] Jedi;
 
+    public int[] InchesOfRain;
 
+    public string[] Dogs;
+     
 
 	// Use this for initialization
 	void Start () {
@@ -42,9 +45,47 @@ public class Arrays : MonoBehaviour {
 			print("Jedi master" + item);
 		}
 
+        InchesOfRain = new int[3];
 
-		
-	}
+        InchesOfRain[0] = 0;
+        InchesOfRain[1] = 5;
+        InchesOfRain[2] = 10;
+        InchesOfRain[3] = 15;
+
+        foreach(int item in InchesOfRain){
+            print("Inches rained today" + item);
+        }
+
+        Dogs = new string[5];
+
+        Dogs[0] = "Boxer";
+        Dogs[1] = "PitBull";
+        Dogs[2] = "Poodle";
+        Dogs[3] = "Dalmation";
+        Dogs[4] = "Husky";
+        Dogs[5] = "BirdDog";
+
+        foreach(string item in Dogs){
+            print("Make sure and feed your" + item);
+        }
+
+        for (int InchesOfRain = 0; InchesOfRain<15; InchesOfRain++){
+            print("It rained" + InchesOfRain);
+        }
+
+        for (string Dogs = "Fed"; Dogs <Fed; Dogs++){
+            print("Make sure and feed your" + Dogs);
+
+        }
+       
+
+
+
+
+
+
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
