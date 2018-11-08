@@ -554,6 +554,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Eggs: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   Jedi: []
+  InchesOfRain: 
+  Dogs: []
+  Pets: []
 --- !u!1 &835769997
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,7 +658,7 @@ Transform:
   m_LocalScale: {x: 0.555174, y: 0.555174, z: 0.555174}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &894892814
 MonoBehaviour:
@@ -1228,7 +1231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d94725396be2f04dbbee50ba4d265b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelManager: {fileID: 2126403884}
+  LevelManager: {fileID: 0}
 --- !u!1 &1377778994
 GameObject:
   m_ObjectHideFlags: 0
@@ -1721,7 +1724,7 @@ Transform:
   m_LocalScale: {x: 24.882408, y: 1.450935, z: 0.95221937}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1768788944
 GameObject:
@@ -6340,6 +6343,53 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1777592959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1777592961}
+  - component: {fileID: 1777592960}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1777592960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1777592959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85e1205935d47fa43ab95e6af7cf172e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentCheckPoint: {fileID: 494099195}
+  Player: {fileID: 2126403881}
+  PC2: {fileID: 2126403878}
+  DeathParticle: {fileID: 1768788944}
+  RespawnParticle: {fileID: 1768788944}
+  RespawnDelay: 3
+  PointPenaltyOnDeath: 10
+--- !u!4 &1777592961
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1777592959}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16.016508, y: 7.0016465, z: 0.06425018}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1781011096
 GameObject:
   m_ObjectHideFlags: 0
@@ -6701,7 +6751,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2115765979
 MonoBehaviour:
@@ -6714,7 +6764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0ec0e7b1c863da4a91a78b37817a3cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NewPC: {fileID: 0}
+  NewPC: {fileID: 2126403883}
   isFollowing: 0
   xOffset: 0
   yOffset: 0
@@ -6730,7 +6780,6 @@ GameObject:
   - component: {fileID: 2126403882}
   - component: {fileID: 2126403881}
   - component: {fileID: 2126403883}
-  - component: {fileID: 2126403884}
   - component: {fileID: 2126403885}
   - component: {fileID: 2126403886}
   m_Layer: 0
@@ -6863,23 +6912,6 @@ MonoBehaviour:
   WhatIsGround:
     serializedVersion: 2
     m_Bits: 256
---- !u!114 &2126403884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2126403878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85e1205935d47fa43ab95e6af7cf172e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrentCheckPoint: {fileID: 494099195}
-  Player: {fileID: 2126403881}
-  DeathParticle: {fileID: 1768788944}
-  RespawnParticle: {fileID: 1768788944}
-  RespawnDelay: 3
-  PointPenaltyOnDeath: 10
 --- !u!114 &2126403885
 MonoBehaviour:
   m_ObjectHideFlags: 0

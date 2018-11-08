@@ -11,26 +11,28 @@ public class Arrays : MonoBehaviour {
     public int[] InchesOfRain;
 
     public string[] Dogs;
+
+	public string[] Pets;
      
 
 	// Use this for initialization
 	void Start () {
 		
 
-		Eggs[0] = 1;
-		Eggs[1] = 2;
-		Eggs[2] = 3;
-		Eggs[3] = 4;
-		Eggs[4] = 5;
-		Eggs[5] = 6;
-		Eggs[6] = 7;
-		Eggs[7] = 8;
-		Eggs[8] = 9;
-		Eggs[9] = 10;
-		Eggs[10] = 11;
-		Eggs[11] = 12;
+	//	Eggs[0] = 1;
+	//	Eggs[1] = 2;
+	//	Eggs[2] = 3;
+	//	Eggs[3] = 4;
+	//	Eggs[4] = 5;
+	//	Eggs[5] = 6;
+	//	Eggs[6] = 7;
+	//	Eggs[7] = 8;
+	//	Eggs[8] = 9;
+	//	Eggs[9] = 10;
+	//	Eggs[10] = 11;
+	//	Eggs[11] = 12;
 
-		print(Eggs[8]);
+		//print(Eggs[8]);
 
 
 		Jedi = new string[4];
@@ -73,10 +75,22 @@ public class Arrays : MonoBehaviour {
             print("It rained" + InchesOfRain);
         }
 
-        for (string Dogs = "Fed"; Dogs <Fed; Dogs++){
-            print("Make sure and feed your" + Dogs);
+		
+		Pets = new string [5];
 
-        }
+		Pets[0] = "Dogs";
+		Pets[1] = "Cats";
+		Pets[2] = "Birds";
+		Pets[3] = "Ferrets";
+		Pets[4] = "Hamsters";
+		Pets[5] = "Fish";
+
+		foreach(string item in Pets){
+			print("My former pets are" + item);
+		}
+
+         
+        
        
 
 
