@@ -35,7 +35,7 @@ public class Arrays : MonoBehaviour {
 		//print(Eggs[8]);
 
 
-		Jedi = new string[4];
+		Jedi = new string[5];
 
 		Jedi[0] = "Obi Wan Kenobi";
 		Jedi[1] = "Yoda";
@@ -47,7 +47,7 @@ public class Arrays : MonoBehaviour {
 			print("Jedi master" + item);
 		}
 
-        InchesOfRain = new int[3];
+        InchesOfRain = new int[4];
 
         InchesOfRain[0] = 0;
         InchesOfRain[1] = 5;
@@ -58,7 +58,7 @@ public class Arrays : MonoBehaviour {
             print("Inches rained today" + item);
         }
 
-        Dogs = new string[5];
+        Dogs = new string[6];
 
         Dogs[0] = "Boxer";
         Dogs[1] = "PitBull";
@@ -76,7 +76,7 @@ public class Arrays : MonoBehaviour {
         }
 
 		
-		Pets = new string [5];
+		Pets = new string [6];
 
 		Pets[0] = "Dogs";
 		Pets[1] = "Cats";
