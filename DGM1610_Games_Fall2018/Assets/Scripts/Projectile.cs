@@ -4,19 +4,27 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour {
 	public float Speed;
-	public Rigidbody2D NewPC;
+	public GameObject NewPC;
 	public GameObject EnemyDeath;
 
 	public GameObject ProjectileParticle;
 
 	public int PointsForKill;
 
+	public int TimeOut;
+
 	// Use this for initialization
 	void Start () {
+		NewPC = GameObject.Find("NewPC");
+
+		EnemyDeath = Resources.Load("Prefab/Particle") as GameObject;
+		ProjectileParticle = Resources.Load("Prefab/Particle") as GameObject;
+
 
 		if(NewPC.transform.localScale.x < 0)
 			Speed = -Speed;
 		
+		Destroy(gameObject, TimeOut);
 	}
 	
 	// Update is called once per frame
