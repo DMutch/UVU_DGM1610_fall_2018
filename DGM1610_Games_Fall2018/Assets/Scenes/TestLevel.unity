@@ -1214,7 +1214,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 5.6, y: 0}
+  m_AnchoredPosition: {x: 5.600006, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1218065966
@@ -2259,7 +2259,6 @@ GameObject:
   - component: {fileID: 2126403881}
   - component: {fileID: 2126403883}
   - component: {fileID: 2126403885}
-  - component: {fileID: 2126403886}
   m_Layer: 0
   m_Name: NewPC
   m_TagString: Untagged
@@ -2404,24 +2403,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FirePoint: {fileID: 1106097069}
   Projectile: {fileID: 1159268296987346, guid: 84ff7753467a5e7408cf3c8a42e77e1a, type: 2}
---- !u!114 &2126403886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2126403878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5f93bfe414eef741968058b1c3e6ef7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveSpeed: 3
-  JumpHeight: 10
-  GroundCheck: {fileID: 2147146678}
-  GroundCheckRadius: 0
-  WhatIsGround:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!1 &2147146677
 GameObject:
   m_ObjectHideFlags: 0
