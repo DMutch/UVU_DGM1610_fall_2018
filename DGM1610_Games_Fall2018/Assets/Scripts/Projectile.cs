@@ -14,7 +14,7 @@ public class Projectile : MonoBehaviour {
 	public int TimeOut;
 
 	// Use this for initialization
-	void Start () {
+	void Start (){
 		NewPC = GameObject.Find("NewPC");
 
 		EnemyDeath = Resources.Load("Prefab/Particle") as GameObject;
@@ -24,7 +24,7 @@ public class Projectile : MonoBehaviour {
 		if(NewPC.transform.localScale.x < 0)
 			Speed = -Speed;
 		
-		Destroy(gameObject,TimeOut);
+		Destroy(gameObject, TimeOut);
 	}
 	
 	// Update is called once per frame
