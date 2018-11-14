@@ -1694,8 +1694,14 @@ MonoBehaviour:
   CurrentCheckPoint: {fileID: 494099195}
   Player: {fileID: 2126403881}
   PC2: {fileID: 2126403878}
+<<<<<<< Updated upstream
   DeathParticle: {fileID: 0}
   RespawnParticle: {fileID: 0}
+=======
+  DeathParticle: {fileID: 1211462703}
+  RespawnParticle: {fileID: 1172523939360396, guid: c282507c2c62e6e44a2a41a559636fd3,
+    type: 2}
+>>>>>>> Stashed changes
   RespawnDelay: 3
   PointPenaltyOnDeath: 10
 --- !u!4 &1777592961
@@ -2319,8 +2325,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2126403878}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.59, y: 4.72, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalPosition: {x: 14.576, y: 4.72, z: 0}
+  m_LocalScale: {x: 3.8229322, y: 4, z: 1}
   m_Children:
   - {fileID: 1106097069}
   - {fileID: 2147146678}
@@ -2403,6 +2409,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FirePoint: {fileID: 1106097069}
   Projectile: {fileID: 1159268296987346, guid: 84ff7753467a5e7408cf3c8a42e77e1a, type: 2}
+<<<<<<< Updated upstream
+=======
+--- !u!114 &2126403886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2126403878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5f93bfe414eef741968058b1c3e6ef7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveSpeed: 3
+  JumpHeight: 10
+  GroundCheck: {fileID: 2147146678}
+  GroundCheckRadius: 0
+  WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 256
+>>>>>>> Stashed changes
 --- !u!1 &2147146677
 GameObject:
   m_ObjectHideFlags: 0

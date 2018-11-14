@@ -24,7 +24,7 @@ public class Projectile : MonoBehaviour {
 		if(NewPC.transform.localScale.x < 0)
 			Speed = -Speed;
 		
-		Destroy(gameObject, TimeOut);
+		Destroy(gameObject,TimeOut);
 	}
 	
 	// Update is called once per frame

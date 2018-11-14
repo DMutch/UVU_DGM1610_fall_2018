@@ -102,7 +102,12 @@ MonoBehaviour:
   Speed: 10
   NewPC: {fileID: 0}
   EnemyDeath: {fileID: 0}
+<<<<<<< Updated upstream
   ProjectileParticle: {fileID: 1159268296987346}
+=======
+  ProjectileParticle: {fileID: 1172523939360396, guid: c282507c2c62e6e44a2a41a559636fd3,
+    type: 2}
+>>>>>>> Stashed changes
   PointsForKill: 10
   TimeOut: 0
 --- !u!212 &212491123141390330
