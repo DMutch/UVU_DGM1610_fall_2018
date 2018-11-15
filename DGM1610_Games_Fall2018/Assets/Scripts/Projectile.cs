@@ -14,7 +14,7 @@ public class Projectile : MonoBehaviour {
 	public int TimeOut;
 
 	// Use this for initialization
-	void Start (){
+	void Start () {
 		NewPC = GameObject.Find("NewPC");
 
 		EnemyDeath = Resources.Load("Prefab/Particle") as GameObject;

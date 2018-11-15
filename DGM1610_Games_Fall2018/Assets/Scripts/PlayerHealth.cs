@@ -7,28 +7,33 @@ public class PlayerHealth : MonoBehaviour {
     public int MaxHealth = 100;
     public int CurrentHealth;
     public string HealthText;
-    
 
-	// Use this for initialization
-	void Start () {
 
+    // Use this for initialization
+    void Start() {
+        MaxHealth = 100;
         CurrentHealth = MaxHealth;
-<<<<<<< Updated upstream
-        for (int MaxHealth = 100; 100 > 1; MaxHealth--);
-            print(CurrentHealth + "Health");
-=======
-        for (int MaxHealth = 0; 100 < 1; MaxHealth--);
->>>>>>> Stashed changes
-            
-		
-	}
-	 
-	void Update()
-    { if (CurrentHealth < 0)
-       print("You are Dead" + HealthText);
+        for (int CurrentHealth = 100; CurrentHealth >= 1; CurrentHealth--);
 
 
     }
-        }
-    
+
+    void Update() {
+        if (CurrentHealth < 0)
+            CurrentHealth = 0;
+        print("You are Dead" + HealthText);
+    }
+
+        public int MaxHealth(int PointsToSubtract) {
+        MaxHealth += PointsToSubtract;
+    }
+    public static void AddPoints(int PointsToAdd)
+    {
+        CurrentHealth += PointsToAdd;
+    }
+
+
+}
+
+
 

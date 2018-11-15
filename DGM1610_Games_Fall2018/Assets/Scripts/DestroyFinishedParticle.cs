@@ -4,22 +4,27 @@ using UnityEngine;
 
 public class DestroyFinishedParticle : MonoBehaviour {
 
-	private ParticleSystem thisParticleSystem;
+    private ParticleSystem thisParticleSystem;
 
-	// Use this for initialization
-	void Start () {
-		thisParticleSystem = GetComponent<ParticleSystem>();	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		if(thisParticleSystem.isPlaying)
-		return;
+    // Use this for initialization
+    void Start()
+    {
+        thisParticleSystem = GetComponent<ParticleSystem>();
+    }
 
-		Destroy (gameObject);
-	}
+    // Update is called once per frame
+    void Update()
+    {
+        if (thisParticleSystem.isPlaying)
+            return;
 
-	void OnBecauseInvisible (){
-		Destroy (gameObject);
-	}
+        Destroy(gameObject);
+    }
+
+    void OnBecauseInvisible()
+    {
+        Destroy(gameObject);
+    }
+
 }
+
