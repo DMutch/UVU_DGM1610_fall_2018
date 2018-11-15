@@ -13,8 +13,12 @@ public class PlayerHealth : MonoBehaviour {
 	void Start () {
 
         CurrentHealth = MaxHealth;
+<<<<<<< Updated upstream
         for (int MaxHealth = 100; 100 > 1; MaxHealth--);
             print(CurrentHealth + "Health");
+=======
+        for (int MaxHealth = 0; 100 < 1; MaxHealth--);
+>>>>>>> Stashed changes
             
 		
 	}
