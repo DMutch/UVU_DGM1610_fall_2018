@@ -13,7 +13,8 @@ public class PlayerHealth : MonoBehaviour {
 	void Start () {
 
         CurrentHealth = MaxHealth;
-        for (int MaxHealth = 0; 1 < 100; MaxHealth--);
+        for (int MaxHealth = 100; 100 > 1; MaxHealth--);
+            print(CurrentHealth + "Health");
             
 		
 	}

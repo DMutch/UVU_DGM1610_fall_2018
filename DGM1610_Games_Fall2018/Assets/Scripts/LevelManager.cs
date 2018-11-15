@@ -26,8 +26,7 @@ public class LevelManager : MonoBehaviour {
 	void Start () {
 		
 		//Player = FindObjectOfType<Rigidbody2D> ();
-
-		
+	
 	}
 	
 	public void RespawnPlayer(){
