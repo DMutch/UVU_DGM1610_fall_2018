@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthPickup : MonoBehaviour {
-
+public class AmmoPickup : MonoBehaviour {
     public int PointsToAdd;
 
     void OnTriggerEnter2D(Collider2D Other)
@@ -11,9 +10,8 @@ public class HealthPickup : MonoBehaviour {
         if (Other.GetComponent<Rigidbody2D>() == null)
             return;
 
-        HealthManager.AddPoints(PointsToAdd);
+        AmmoManager.AddPoints(PointsToAdd);
 
         Destroy(gameObject);
     }
-
 }
