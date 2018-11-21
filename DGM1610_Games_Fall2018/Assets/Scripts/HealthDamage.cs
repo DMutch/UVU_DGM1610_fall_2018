@@ -4,20 +4,17 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class HealthDamage : MonoBehaviour {
-    public static int Health = 100;
+    public static int Health;
 
     public Text HealthText;
+   // public int CurrentHealth;
 
 
 
     // Use this for initialization
-    void Start()
-    {
-        //ScoreText = GetComponent<Text>();
-
-        Health = 100;
-
-    }
+    //void Start()
+   
+       
 
     // Update is called once per frame
     void Update()

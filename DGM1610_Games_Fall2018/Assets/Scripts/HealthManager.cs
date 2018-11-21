@@ -28,7 +28,7 @@ public class HealthManager : MonoBehaviour {
         HealthText.text = " " + Health;
     }
 
-    public static void AddPoints(int PointsToAdd)
+    public static void AddPoints (int PointsToAdd)
     {
         Health += PointsToAdd;
     }
