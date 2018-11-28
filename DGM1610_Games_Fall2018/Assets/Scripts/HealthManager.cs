@@ -9,6 +9,8 @@ public class HealthManager : MonoBehaviour {
 
     public Text HealthText;
 
+    //public static int PointPenaltyOnDeath;
+
 
 
     // Use this for initialization
@@ -23,6 +25,7 @@ public class HealthManager : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+         
         if (Health < 0)
             Health = 0;
         HealthText.text = " " + Health;
@@ -31,6 +34,7 @@ public class HealthManager : MonoBehaviour {
     public static void AddPoints (int PointsToAdd)
     {
         Health += PointsToAdd;
+        
     }
 
 }

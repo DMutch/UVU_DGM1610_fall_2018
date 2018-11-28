@@ -9,19 +9,19 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1326283032485262}
+  m_RootGameObject: {fileID: 1789800075408670}
   m_IsPrefabAsset: 1
---- !u!1 &1326283032485262
+--- !u!1 &1789800075408670
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4314595621363438}
-  - component: {fileID: 212164026741010564}
-  - component: {fileID: 58846093921474748}
-  - component: {fileID: 114494713456045296}
+  - component: {fileID: 4534566993128476}
+  - component: {fileID: 212355023897650156}
+  - component: {fileID: 114043814289854958}
+  - component: {fileID: 58408142442490424}
   m_Layer: 10
   m_Name: Coin
   m_TagString: PickUP
@@ -29,25 +29,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4314595621363438
+--- !u!4 &4534566993128476
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1326283032485262}
+  m_GameObject: {fileID: 1789800075408670}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.85, y: 1.0588465, z: -20.986074}
+  m_LocalPosition: {x: 2.143587, y: 1.0205796, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &58846093921474748
+--- !u!58 &58408142442490424
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1326283032485262}
+  m_GameObject: {fileID: 1789800075408670}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -57,24 +57,24 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.975
---- !u!114 &114494713456045296
+--- !u!114 &114043814289854958
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1326283032485262}
+  m_GameObject: {fileID: 1789800075408670}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9a97ac9a25c0cd489a4779bf76f6233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PointsToAdd: 5
---- !u!212 &212164026741010564
+--- !u!212 &212355023897650156
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1326283032485262}
+  m_GameObject: {fileID: 1789800075408670}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -105,7 +105,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300018, guid: 8e465b2662855fb419a82c00ce2de0d8, type: 3}
-  m_Color: {r: 0.8962264, g: 0.48374668, b: 0.1986917, a: 1}
+  m_Color: {r: 0.9433962, g: 0.44817972, b: 0.004449993, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
