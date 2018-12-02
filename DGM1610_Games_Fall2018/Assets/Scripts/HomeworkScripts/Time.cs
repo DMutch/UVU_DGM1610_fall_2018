@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Time: MonoBehaviour {
-
+    internal static int timeScale;
     public string TimeOfDay;
 
 	// Use this for initialization

@@ -4,29 +4,25 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerDamage : MonoBehaviour {
-    public static int Health;
+    public int CurrentHealth;
+    public int Damage;
 
-    public Text HealthText;
-   // public int CurrentHealth;
 
 
 
     // Use this for initialization
     //void Start()
-   
-       
+
+
 
     // Update is called once per frame
-    void Update()
-    {
-        if (Health < 0)
-            Health = 0;
-        
-    }
 
-    public static void SubtractPoints(int PointsToSubtract)
-    {
-        Health -= PointsToSubtract;
+    private void OnCollisionEnter(Collision collision)
+    { if(collision.gameObject.tag == "Enemy")
+        {
+            CurrentHealth -= Damage;
+        }
+        
     }
 
 }

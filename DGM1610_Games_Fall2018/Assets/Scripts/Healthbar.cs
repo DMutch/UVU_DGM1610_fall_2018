@@ -8,11 +8,11 @@ public class Healthbar : MonoBehaviour
 
     public Image HealthBar;
 
-    public Text HealthText;
-
     public int MinHealth;
 
     public int MaxHealth;
+
+    public Text HealthPercent;
 
     private int CurrentHealth;
 
@@ -34,7 +34,7 @@ public class Healthbar : MonoBehaviour
                 CurrentPercent = (float)CurrentHealth / (float)(MaxHealth - MinHealth);
             }
 
-            HealthText.text = string.Format("{0} %", Mathf.RoundToInt(CurrentPercent * 100));
+            HealthPercent.text = string.Format("{0} %", Mathf.RoundToInt(CurrentPercent * 100));
 
             HealthBar.fillAmount = CurrentPercent;
         }
@@ -53,12 +53,30 @@ public class Healthbar : MonoBehaviour
     //Use this for initialization
     void Start()
     {
+        MaxHealth = 100;
+        
+        
+         
+    }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.name == "Enemy")
+        {
+            CurrentPercent = MaxHealth - 10;
+            print(CurrentPercent);
+            HealthPercent.text = CurrentPercent + "%";
+            
+
+        }
+
+        if (other.name == "Health (1)")
+        {
+            CurrentPercent = MaxHealth + 10;
+            HealthPercent.text = CurrentPercent + "%";
+            
+
+        }
 
     }
-    // void OnTriggerEnter2D(Collider2D other)
-    // {
-    // if (other.name == "Enemy")
-    // {
-
-    // }
+    
 }

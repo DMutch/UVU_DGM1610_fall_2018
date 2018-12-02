@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 
 public class EnemyPatrol : MonoBehaviour {
 
@@ -25,13 +24,14 @@ public class EnemyPatrol : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		NotAnEdge = Physics2D.OverlapCircle(EdgeCheck.position, WallCheckRadius, WhatIsWall);
+		NotAnEdge = Physics2D.OverlapCircle (EdgeCheck.position, WallCheckRadius, WhatIsWall);
 
-		HittingWall = Physics2D.OverlapCircle(WallCheck.position, WallCheckRadius, WhatIsWall);
-	// Turn around at Wall or Edge
-		if (HittingWall || !NotAnEdge){
-			MoveRight = !MoveRight;
-		}
+		HittingWall = Physics2D.OverlapCircle (WallCheck.position, WallCheckRadius, WhatIsWall);
+        // Turn around at Wall or Edge
+        if (HittingWall || !NotAnEdge)
+        {
+            //MoveRight = !MoveRight;
+        }
 
 		if (MoveRight){
 			transform.localScale = new Vector3(-6f,6f,1f);
