@@ -8,7 +8,7 @@ public class Healthbar : MonoBehaviour
 
     public Image HealthBar;
 
-    public int MinHealth;
+    private int MinHealth;
 
     public int MaxHealth;
 
@@ -18,25 +18,28 @@ public class Healthbar : MonoBehaviour
 
     private float CurrentPercent;
 
+    //Bar doesn't change until this number for some reason
+    private const float trueFillMaximum = 0.842f;
+
     public void SetHealth(int Health)
     {
+        
         if (Health != CurrentHealth)
         {
-            if (MaxHealth - MinHealth == 0)
+            if (Health >= MaxHealth)
             {
-                CurrentHealth = 0;
-                CurrentPercent = 0;
+                CurrentHealth = MaxHealth;
             }
             else
             {
                 CurrentHealth = Health;
-
-                CurrentPercent = (float)CurrentHealth / (float)(MaxHealth - MinHealth);
             }
+            
+            CurrentPercent = (float)CurrentHealth / (float)(MaxHealth);
 
             HealthPercent.text = string.Format("{0} %", Mathf.RoundToInt(CurrentPercent * 100));
 
-            HealthBar.fillAmount = CurrentPercent;
+            HealthBar.fillAmount = CurrentPercent*trueFillMaximum;
         }
     }
 
@@ -44,6 +47,7 @@ public class Healthbar : MonoBehaviour
     {
         get { return CurrentPercent; }
     }
+
     public int CurrentValue
     {
         get { return CurrentHealth; }
@@ -54,29 +58,26 @@ public class Healthbar : MonoBehaviour
     void Start()
     {
         MaxHealth = 100;
-        
-        
-         
+        SetHealth(MaxHealth);
+        MinHealth = 0;
     }
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.name == "Enemy")
-        {
-            CurrentPercent = MaxHealth - 10;
-            print(CurrentPercent);
-            HealthPercent.text = CurrentPercent + "%";
-            
 
-        }
+    //void OnTriggerEnter2D(Collider2D other)
+    //{
+        //if (other.name == "Enemy")
+        //{
+            //SetHealth(CurrentHealth - 10);
+            //CurrentHealth = CurrentHealth - 10;
+            //print(CurrentPercent);
+            //HealthPercent.text = CurrentPercent + "%";
+        //}
 
-        if (other.name == "Health (1)")
-        {
-            CurrentPercent = MaxHealth + 10;
-            HealthPercent.text = CurrentPercent + "%";
-            
+        //if (other.name == "Health (1)")
+        //{
+        //    CurrentPercent = MaxHealth + 10;
+        //    HealthPercent.text = CurrentPercent + "%";
+        //}
 
-        }
-
-    }
+    //}
     
 }

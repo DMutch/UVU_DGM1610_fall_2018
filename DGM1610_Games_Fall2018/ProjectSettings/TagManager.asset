@@ -23,8 +23,8 @@ TagManager:
   - Health_ignore
   - Ammo
   - Ammo_ignore
-  - 
-  - 
+  - Pickup_ignore
+  - Bullets
   - 
   - 
   - 

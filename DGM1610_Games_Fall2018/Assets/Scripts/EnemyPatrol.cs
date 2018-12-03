@@ -11,11 +11,11 @@ public class EnemyPatrol : MonoBehaviour {
 	public Transform WallCheck;
 	public float WallCheckRadius;
 	public LayerMask WhatIsWall;
-	private bool HittingWall;
+    private bool HittingWall;
 
 	// Edge Check
-	private bool NotAnEdge;
-	public Transform EdgeCheck;
+	// private bool NotAnEdge;
+	// public Transform EdgeCheck;
 
 	// Use this for initialization
 	void Start () {
@@ -24,13 +24,11 @@ public class EnemyPatrol : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		NotAnEdge = Physics2D.OverlapCircle (EdgeCheck.position, WallCheckRadius, WhatIsWall);
-
-		HittingWall = Physics2D.OverlapCircle (WallCheck.position, WallCheckRadius, WhatIsWall);
+        HittingWall = Physics2D.OverlapCircle(WallCheck.position, WallCheckRadius, WhatIsWall);
         // Turn around at Wall or Edge
-        if (HittingWall || !NotAnEdge)
+        if (HittingWall)
         {
-            //MoveRight = !MoveRight;
+            MoveRight = !MoveRight;
         }
 
 		if (MoveRight){
