@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: 8e465b2662855fb419a82c00ce2de0d8
+labels:
+- Character
 TextureImporter:
   fileIDToRecycleName:
     21300000: Cat_Arched
@@ -18,7 +20,7 @@ TextureImporter:
     21300026: Ground_Medium
     21300028: Ground_Small
   externalObjects: {}
-  serializedVersion: 7
+  serializedVersion: 5
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -36,8 +38,6 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
-  streamingMipmaps: 0
-  streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -407,8 +407,6 @@ TextureImporter:
     edges: []
     weights: []
   spritePackingTag: 
-  pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

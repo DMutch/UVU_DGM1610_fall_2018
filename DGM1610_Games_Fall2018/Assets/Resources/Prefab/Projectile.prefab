@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3398dd76d43b4984ca3e7b1e4ddcdc1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 10
+  Speed: 25
   NewPC: {fileID: 0}
   EnemyDeath: {fileID: 0}
   ProjectileParticle: {fileID: 1280908278162452, guid: 10f56aa41d21d0f4b979e19de09a5acd,
